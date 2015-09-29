@@ -1,6 +1,6 @@
 function setup() {
 	// create a place to draw
-	createCanvas(640, 360);
+	createCanvas(640, 480);
 	noStroke();
 	noLoop();
 }
