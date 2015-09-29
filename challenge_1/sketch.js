@@ -4,6 +4,7 @@ function setup() {
 	colorMode(RGB);
 	noStroke();
 	noLoop();
+
 }
 
 function draw() {
@@ -26,6 +27,12 @@ function drawFlower(x,y,size) {
 	for (var i=0; i<10; i++){
 			fill(0,120,10);
 			rect(random(0,640), random(450,240), 05, 110,20);
+	//first ring
+			fill(255,255,255,80)
+			ellipse(random(0,640),random(450,240),10,10);
+
+	//second ring
+
 }
 
 
