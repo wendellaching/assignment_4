@@ -5,7 +5,7 @@ function setup() {
 	createCanvas(640, 480);
 	background(90, 90, 110);
 	noStroke();
-	noLoop();
+	// noLoop();
 }
 
 function draw() {
@@ -15,20 +15,26 @@ function draw() {
 
 	//walls
 	var leftWall = 0;
-	var rightWall = 320;
-	var xM = mouseX
-	var yM = mouseY
+	var rightWall = 240;
+	var xM = mouseX - 150;
+	var yM = mouseY;
 	var xC = constrain(mouseX,leftWall,rightWall);
-	var yC = contrain(mouseY,leftWall,rightWall);
+	var yC = constrain(mouseY,leftWall,rightWall+150);
 
 	//draw the walls
-	stroke (90,90,110);
+	noFill();
 	line(leftWall,0,leftWall,height);
 	line(rightWall,0,rightWall,height);
-	//lines constrained
-	noStroke();
-	fill(200,50,50);
-	line(xC,0,23,leftWall,rightWall,height);
+
+	//lines constrain
+	stroke(200,50,50);
+	strokeWeight(15);
+	line(20+xC, 20+yC, 85+xC, 85+yC);
+	line(20+xC, 85+yC, 85+xC, 20+yC);
+
+}
+
+
 
 	//x
 	// fill(200,50,50);
@@ -40,7 +46,3 @@ function draw() {
 	// rect(mouseX, 150, mouseY, 309, 25, 115, 20);
 	//
 	// myCanvas.position(windowWidth/2, winMouseY+1);
-
-
-
-}
