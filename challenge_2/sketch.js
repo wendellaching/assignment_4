@@ -37,12 +37,11 @@ function draw() {
 	updateBall);
 	paddle.x = mouseY;
 	background(50, 50, 50);
-	circle(ball.x, ball.y, ball.radius * 2, ball.radius * 2);
-	square(paddle.x - paddle.width * 0.5, paddle.y, paddle.width, paddle.height);
+	ellipse(ball.x, ball.y, ball.radius * 2, ball.radius * 2);
+	rect(paddle.x - paddle.width * 0.5, paddle.y, paddle.width, paddle.height);
 }
 
-function updateBall()
-{
+function updateBall(){
 	// change position
 	ball.x = ball.x + ball.speedX;
 	ball.y = ball.y + ball.speedY;
