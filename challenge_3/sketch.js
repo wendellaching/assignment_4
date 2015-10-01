@@ -1,4 +1,4 @@
-var myCanvas;
+// var myCanvas;
 
 function setup() {
 	// create a place to draw
@@ -12,10 +12,25 @@ function draw() {
 	// clear the background
 	fill(0, 0,0);
 	rect(40,50,225,380);
+
 	//walls
 	var leftWall = 0;
-	var rightWall = 240;
-	// x
+	var rightWall = 320;
+	var xM = mouseX
+	var yM = mouseY
+	var xC = constrain(mouseX,leftWall,rightWall);
+	var yC = contrain(mouseY,leftWall,rightWall);
+
+	//draw the walls
+	stroke (90,90,110);
+	line(leftWall,0,leftWall,height);
+	line(rightWall,0,rightWall,height);
+	//lines constrained
+	noStroke();
+	fill(200,50,50);
+	line(xC,0,23,leftWall,rightWall,height);
+
+	//x
 	// fill(200,50,50);
 	// translate(width/2, height/2);
 	// rotate(PI/4.0);
