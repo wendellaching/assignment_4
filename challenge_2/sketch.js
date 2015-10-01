@@ -4,16 +4,16 @@ var ball = {
 	y: 100,
 	speedX: 5,
 	speedY: 5,
-	radius: 25,
-};
+	radius: 25
+}
 
 // paddle: a data object to hold info about the ball
 var paddle = {
 	x: 0,
 	y: 350,
 	width: 300,
-	height: 30,
-};
+	height: 30
+}
 
 
 // setup: called by p5 once at startup
@@ -23,7 +23,7 @@ function setup() {
 }
 
 function draw() {
-	updateBall;
+	updateBall();
 	paddle.x = mouseX;
 	background(50, 50, 50);
 	ellipse(ball.x, ball.y, ball.radius * 2, ball.radius * 2);
@@ -55,7 +55,7 @@ function updateBall() {
 			ball.speedY = - ball.speedY;
 	}
 
-	if (ball.x > (paddle.x - paddle.width) && ball.x < (paddle.x + paddle.width) && ball.y > paddle.y - ball.radius) {
+	if (ball.x > (paddle.x - paddle.width*0.5) && ball.x < (paddle.x + paddle.width*0.5) && ball.y > paddle.y - ball.radius) {
 		if (ball.speedY > 0) {
 			ball.speedY = - ball.speedY;
 		}
