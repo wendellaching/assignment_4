@@ -38,6 +38,5 @@ function draw( x,y, size) {
 				// fill(255,255,255,60);
 				// ellipse(xPositions[i]+2.5, yPositions[i]+2.5, size+15,size+15);
 
-
 		}
 }
