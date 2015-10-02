@@ -1,23 +1,25 @@
 function setup() {
 	// create a place to draw
+	// frameRate(1);
 	createCanvas(640, 480);
 	noStroke();
 	noLoop();
-	frameRate(10);
 }
 
 function draw() {
 	// clear the background
 	background(50, 10, 10);
-			stroke(255);
-			strokeWeight(10);
-			line(mouseX, mouseY, pmouseX, pmouseY);
-			print(pmouseX + " -> " + mouseX);
-		}
-	// set fill color for inner circle
-	fill(0,100,255);
-
-	// draw the ellipse
-	var diameter = random(100, 200);
-	ellipse(320, 180, diameter, diameter);
+	//  line
+	if (mouseIsPressed) {
+	  	stroke(255);
+	  	strokeWeight(10);
+	  	line(mouseX, mouseY, pmouseX, pmouseY);
+	} else {
+		// frameRate(1);
+		fill (255,255,255);
+		ellipse (mouseX,mouseY, 50,50);
+		//inner circle
+		fill(0,100,255);
+		ellipse (mouseX, mouseY, 25,25);
+	}
 }
