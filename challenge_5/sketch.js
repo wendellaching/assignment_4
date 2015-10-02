@@ -1,3 +1,6 @@
+var a = 0
+	var b = 0
+
 function setup() {
 	// create a place to draw
 	// frameRate(1);
@@ -5,21 +8,27 @@ function setup() {
 	// noStroke();
 	//noLoop();
 }
-
 function draw() {
-	// clear the background
 	background(50, 10, 10);
-	//  line
-	if (mouseIsPressed) {
-	  	stroke(255);
-	  	strokeWeight(10);
-	  	line(mouseX, mouseY, pmouseX,pmouseY);
+strokeWeight(10);
+	if (!mouseIsPressed) {
+		a = mouseX;
+		b = mouseY;
 	} else {
-		// frameRate(1);
-		fill (255,255,255);
-		ellipse (mouseX,mouseY, 50,50);
-		//inner circle
-		fill(0,100,255);
-		ellipse(mouseX, mouseY, 25,25);
-	}
+fill(255, 255, 255);
+stroke(255);
+
+line(a, b, mouseX, mouseY);
+
+}
+if (mouseIsPressed){
+fill(0, 100, 255);
+stroke(255);
+	ellipse(a, b, 50, 50);
+}
+
+fill(0, 100, 255);
+stroke(255);
+	// draw an ellipse
+	ellipse(mouseX, mouseY, 50, 50);
 }
