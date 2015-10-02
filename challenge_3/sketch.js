@@ -15,11 +15,11 @@ function draw() {
 
 	//walls
 	var leftWall = 0;
-	var rightWall = 240;
-	var xM = mouseX - 150;
+	var rightWall = 380;
+	var xM = mouseX;
 	var yM = mouseY;
 	var xC = constrain(mouseX,leftWall,rightWall);
-	var yC = constrain(mouseY,leftWall,rightWall+150);
+	var yC = constrain(mouseY,leftWall,rightWall);
 
 	//draw the walls
 	noFill();
