@@ -5,7 +5,7 @@ var ballSizes = [];
 function setup() {
 	// create a place to draw
 	createCanvas(640, 480);
-	for (var i = 0; i < 10; i++) {
+	for (var i = 0; i < 20; i++) {
 		xPositions[i] = random(0, 640);
 		yPositions[i] = random(0, 480);
 		ballSizes[i] = random(10, 30);
