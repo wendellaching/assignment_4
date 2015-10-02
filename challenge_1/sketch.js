@@ -33,7 +33,7 @@ function draw( x,y, size) {
 				ellipse(xPositions[i]+2.5, yPositions[i]+2.5, size-05,size-05);
 				//fourth circle
 				fill(255,255,255,70);
-				ellipse(xPositions[i]+2.5, yPositions[i]+2.5, size+5,size+05);
+				ellipse(xPositions[i], yPositions[i]+2.5, size+5,size+05);
 				// //fifth circle
 				// fill(255,255,255,60);
 				// ellipse(xPositions[i]+2.5, yPositions[i]+2.5, size+15,size+15);
