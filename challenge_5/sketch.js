@@ -3,11 +3,17 @@ function setup() {
 	createCanvas(640, 480);
 	noStroke();
 	noLoop();
+	frameRate(10);
 }
 
 function draw() {
 	// clear the background
 	background(50, 10, 10);
+			stroke(255);
+			strokeWeight(10);
+			line(mouseX, mouseY, pmouseX, pmouseY);
+			print(pmouseX + " -> " + mouseX);
+		}
 	// set fill color for inner circle
 	fill(0,100,255);
 
