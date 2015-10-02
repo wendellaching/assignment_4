@@ -55,7 +55,7 @@ function updateBall() {
 			ball.speedY = - ball.speedY;
 	}
 
-	if (ball.x > (paddle.x - paddle.width*0.5) && ball.x < (paddle.x + paddle.width*0.5) && ball.y > paddle.y - ball.radius) {
+	if (ball.x > (paddle.x - paddle.width) && ball.x < (paddle.x + paddle.width) && ball.y > paddle.y - ball.radius) {
 		if (ball.speedY > 0) {
 			ball.speedY = - ball.speedY;
 		}
